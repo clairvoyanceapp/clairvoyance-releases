@@ -2,7 +2,7 @@
 set -euo pipefail
 
 root="$(cd "$(dirname "$0")/../.." && pwd)"
-types='["extensions","skills","mcp","themes","icon-themes","basetypes","canvas-templates","note-templates","jobs","artifacts"]'
+types='["extensions","skills","mcp","themes","icon-themes","basetypes","canvas-templates","note-templates","jobs","artifacts","exhibits"]'
 
 jq empty "$root/desktop-releases.json" "$root/community-stats.json" "$root"/community/*.json
 

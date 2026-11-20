@@ -32,6 +32,7 @@ Each file under `community/` is a JSON array of pointers. The package itself sta
 | `note-templates.json` | `config/templates` |
 | `jobs.json` | `config/jobs` |
 | `artifacts.json` | `config/artifacts/<id>/` |
+| `exhibits.json` | `exhibits/<id>/` |
 
 `removed.json` lists yanked ids, keyed by those same names. `community-stats.json` is generated download counts. Do not edit it by hand.
 
