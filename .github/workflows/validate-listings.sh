@@ -41,8 +41,12 @@ jq -e --argjson types "$types" '
   and all(.[]; type == "array" and all(.[]; type == "string" and test("^[a-z0-9][a-z0-9-]*$")))
 ' "$root/community/removed.json" >/dev/null
 
-if git -C "$root" ls-files | grep -Ei '\.(exe|msi|dmg|appimage|deb|zip|blockmap)$'; then
-  echo "Installers do not belong in this repository." >&2
+# This repo holds catalogs only. Anything outside this list (app source,
+# build output, installers) fails the check.
+allowed='^(\.gitattributes|\.gitignore|LICENSE\.md|README\.md|review\.md|desktop-releases\.json|community-stats\.json|community/[a-z0-9-]+\.json|\.github/pull_request_template\.md|\.github/workflows/[A-Za-z0-9_-]+\.(yml|sh))$'
+if unexpected="$(git -C "$root" ls-files | grep -Ev "$allowed")"; then
+  echo "Only catalogs belong in this repository. Not allowed:" >&2
+  echo "$unexpected" >&2
   exit 1
 fi
 

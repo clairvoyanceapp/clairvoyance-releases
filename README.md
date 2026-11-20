@@ -2,9 +2,9 @@
 
 Public releases and community catalogs for [Clairvoyance](https://www.clairvoyanceai.com).
 
-This repository does not contain the Clairvoyance source code. Installers are attached to [GitHub Releases](https://github.com/StardockCorp/clairvoyance-releases/releases). The files in git are catalogs: a version pointer, and lists of packages the app can install.
+This repository does not contain the Clairvoyance source code. Installers are attached to [GitHub Releases](https://github.com/clairvoyanceapp/clairvoyance-releases/releases). The files in git are catalogs: a version pointer, and lists of packages the app can install.
 
-`desktop-releases.json` names the latest published version and the per-platform installer URL, sha256, and size. It is empty until the first signed release is published. Built installers stay in the product's `App/Binaries` directory and are uploaded from there. Do not commit `.exe`, `.dmg`, `.AppImage`, or `.deb` files to this repo.
+`desktop-releases.json` names the latest published version and, for each platform, the installer URL, sha256, and size. Installers are attached to GitHub Releases and are never committed here. A CI check rejects any file that is not a catalog.
 
 ## Community catalogs
 
