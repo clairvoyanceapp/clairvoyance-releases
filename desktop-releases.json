@@ -1,13 +1,12 @@
 {
   "latestVersion": "0.91.1",
-  "releasedAt": "2026-11-20T03:32:18.691Z",
+  "releasedAt": "2026-11-20T13:26:57.674Z",
   "minimumVersion": null,
   "platforms": {
     "windows-x64": {
-      "version": "0.91.0",
-      "url": "https://github.com/clairvoyanceapp/clairvoyance-releases/releases/download/v0.91.0/Clairvoyance-Setup-0.91.0-x64.exe",
-      "sha256": "aedbb29ff0a0ba08cac94edc6748d6abf3d64f56f31b4247a2022bdb295603a8",
-      "size": 273865496
+      "url": "https://github.com/clairvoyanceapp/clairvoyance-releases/releases/download/v0.91.1/Clairvoyance-Setup-0.91.1-x64.exe",
+      "sha256": "d40f029fdf39cbfca169887f6ca0a91cf3325ee6df4ba18df8394e10a8e8e5a6",
+      "size": 287414784
     },
     "windows-arm64": {
       "url": "https://github.com/clairvoyanceapp/clairvoyance-releases/releases/download/v0.91.1/Clairvoyance-Setup-0.91.1-arm64.exe",
